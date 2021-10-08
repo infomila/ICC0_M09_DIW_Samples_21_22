@@ -1,0 +1,66 @@
+html {
+  height: 100%;
+  padding: 20px;
+}
+html main section {
+  margin: 5px;
+  position: relative;
+  padding: 30px;
+  border: 0px solid black;
+  background-color: #fcffd3;
+}
+html main section:hover {
+  left: -5px;
+}
+html main section:before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  background-color: rebeccapurple;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: 20px solid white;
+  border-left-color: yellow;
+  border-bottom-color: yellow;
+  -webkit-box-shadow: -17px 14px 14px -12px rgba(0, 0, 0, 0.63);
+  box-shadow: -17px 14px 14px -12px rgba(0, 0, 0, 0.63);
+}
+html main p {
+  border: 1px solid red;
+  background-color: lime;
+  margin: 20px;
+}
+html main #window_menu {
+  position: fixed;
+  bottom: 0px;
+  right: 15%;
+  z-index: 1000;
+}
+html main #window_menu:hover li {
+  height: 20px;
+  transition: height 1s, padding 1s;
+  padding: 10px;
+}
+html main #window_menu h1,
+html main #window_menu li {
+  border: 1px solid black;
+  background-color: antiquewhite;
+  transition: height 1s, padding 1s;
+}
+html main #window_menu h1 {
+  height: 20px;
+  padding: 10px;
+}
+html main #window_menu li {
+  height: 0px;
+  border-width: 0px;
+}
+html main #window_menu li:hover {
+  background-color: yellow;
+}
+html main #window_menu h1 {
+  font-weight: 800;
+  background-color: #fdeb9a;
+}

@@ -1,0 +1,93 @@
+html {
+  height: 100%;
+  color: #000000ff;
+  background-color: #ffff66;
+  font-size: 20px;
+  background-image: url("images/Desert.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+main {
+  color: #000000ff;
+}
+.primer {
+  font-size: 120%;
+  width: 20em;
+  border: 1px solid rgba(0, 0, 0, 0.808);
+  padding: 10px;
+  margin: 20px;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+i {
+  display: block;
+  font-size: 120%;
+}
+.segon {
+  width: 50%;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: hsl(200, 100%, 50%);
+}
+b {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  margin: 10px auto;
+}
+.rodona {
+  border-radius: 50%;
+}
+.triangle {
+  background-color: transparent;
+  border: 20px solid transparent;
+  width: 0px;
+  height: 0px;
+  border-bottom-color: black;
+  border-bottom-width: 30px;
+}
+a {
+  color: black;
+  display: block;
+  background-image: url(images/pdf.svg);
+  background-size: 40px 20px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+li {
+  margin: 10px;
+}
+ul {
+  background-color: white;
+  padding: 20px;
+}
+li:hover {
+  background-color: red;
+}
+a[href$=".xlsx"] {
+  background-image: url(images/excel.png);
+  background-size: 20px 20px;
+  background-position-x: 10px;
+}
+a:focus {
+  border: 2px solid red;
+}
+a {
+  position: relative;
+}
+a:before {
+  content: "LINK:";
+}
+a:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}

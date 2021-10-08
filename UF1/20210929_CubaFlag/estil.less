@@ -1,0 +1,49 @@
+@alsada: 70px;
+@amplada: 400px;
+
+body {
+    .cuba {
+        width: @amplada;
+        height: @alsada;
+        @blue: blue;
+        position: relative;
+
+        background: linear-gradient(to bottom,
+                @blue 0%, @blue 20%, white 21%, white 40%, @blue 41%, @blue 60%, white 61%, white 80%, @blue 81%, @blue 100%);
+
+        &:hover::before {
+            border-left-color: lime;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 0px;
+            height: 0px;
+            border: (@alsada/2) solid transparent;
+            border-left-color: red;
+            border-left-width: (sqrt(3*@alsada*@alsada/4));
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+            &:hover {
+                border-left-color: lime;
+            }
+        }
+
+        &::after {
+            content: "★";
+            color: white;
+            font-size: (@alsada/3);
+            line-height: @alsada;
+            position: absolute;
+            height: @alsada;
+            top: 0px;
+            left: (@alsada/5);
+
+
+        }
+
+    }
+}

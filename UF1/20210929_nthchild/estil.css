@@ -1,0 +1,18 @@
+body ul {
+  background-color: #f8e0f8;
+}
+body ul li {
+  padding: 30px;
+}
+body ul li:nth-child(3n) {
+  background-color: yellow;
+}
+body ul li:nth-child(3n+1) {
+  background-color: #c9be2c;
+}
+body ul li:nth-child(3n+2) {
+  background-color: #4d520c;
+}
+body ul li:nth-last-child(2) {
+  color: blue;
+}
