@@ -1,0 +1,100 @@
+#org_iesmila_info {
+  background-image: url(../images/background.jpg);
+  height: 300px;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: red;
+  overflow: auto;
+}
+#org_iesmila_info body {
+  position: relative;
+}
+#org_iesmila_info b {
+  position: absolute;
+  top: 110%;
+  left: 0px;
+  width: 100%;
+  height: 62px;
+  background-color: red;
+  border: 30px solid black;
+  box-sizing: border-box;
+}
+#org_iesmila_info .comic-strip {
+  display: flex;
+  font-size: 15px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+#org_iesmila_info .comic-strip .comic {
+  flex: 1;
+  background-color: lightsalmon;
+  padding: 50px;
+  border-radius: 50%;
+  margin: 20px;
+  font-family: Calibri, sans-serif;
+  font-style: normal;
+  text-align: center;
+  position: relative;
+  margin-bottom: 200px;
+}
+#org_iesmila_info .comic-strip .comic:before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  border: 20px solid lightsalmon;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: calc(100% - 10px);
+  left: 50%;
+  transform: translateX(-50%) rotate(15deg);
+  z-index: 10;
+}
+#org_iesmila_info .comic-strip .comic:after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 180px;
+  position: absolute;
+  bottom: -200px;
+  border-radius: 15px;
+  background-color: black;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#org_iesmila_info .comic-strip .joker {
+  background-color: #d82e2e;
+}
+#org_iesmila_info .comic-strip .joker:before {
+  border-left-color: #d82e2e;
+  border-top-color: #d82e2e;
+}
+#org_iesmila_info .comic-strip .joker:after {
+  background-image: url("../images/joker.png");
+  background-size: cover;
+}
+#org_iesmila_info .comic-strip .batman {
+  background-color: #dfdf41;
+}
+#org_iesmila_info .comic-strip .batman:before {
+  border-left-color: #dfdf41;
+  border-top-color: #dfdf41;
+}
+#org_iesmila_info .comic-strip .batman:after {
+  background-image: url("../images/batman.png");
+  background-size: cover;
+}
+#org_iesmila_info .comic-strip .harvey {
+  background-color: #cf4bcf;
+}
+#org_iesmila_info .comic-strip .harvey:before {
+  border-left-color: #cf4bcf;
+  border-top-color: #cf4bcf;
+}
+#org_iesmila_info .comic-strip .harvey:after {
+  background-image: url("../images/hd.png");
+  background-size: cover;
+}

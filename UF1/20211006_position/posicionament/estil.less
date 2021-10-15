@@ -42,6 +42,41 @@ html {
 
         }
 
+        #topbar {
+            >ul {
+                display: flex;
+            }
+
+            li {
+                //display: inline-block;
+                background-color: bisque;
+                padding: 15px;
+                position: relative;
+
+                &:hover {
+                    background-color: rgb(150, 121, 86);
+
+                    >ul {
+                        display: block;
+                    }
+                }
+            }
+
+            >ul ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0px;
+                z-index: 3;
+                ;
+            }
+
+            >ul>li>ul ul {
+                top: 0%;
+                left: 100%;
+            }
+        }
+
         #window_menu {
             position: fixed;
             bottom: 0px;

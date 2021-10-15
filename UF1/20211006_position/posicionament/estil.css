@@ -32,6 +32,31 @@ html main p {
   background-color: lime;
   margin: 20px;
 }
+html main #topbar > ul {
+  display: flex;
+}
+html main #topbar li {
+  background-color: bisque;
+  padding: 15px;
+  position: relative;
+}
+html main #topbar li:hover {
+  background-color: #967956;
+}
+html main #topbar li:hover > ul {
+  display: block;
+}
+html main #topbar > ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: 3;
+}
+html main #topbar > ul > li > ul ul {
+  top: 0%;
+  left: 100%;
+}
 html main #window_menu {
   position: fixed;
   bottom: 0px;

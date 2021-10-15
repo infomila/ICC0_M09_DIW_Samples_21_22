@@ -1,0 +1,30 @@
+html {
+  height: 100%;
+}
+html img {
+  display: block;
+  float: right;
+  margin: 20px;
+  clear: right;
+}
+html .row {
+  padding: 10px;
+  background-color: red;
+  overflow: auto;
+}
+html .row .col {
+  font-size: 20px;
+  background-color: lime;
+  float: left;
+  clear: right;
+  width: 50%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 10px;
+}
+html #minicapsa {
+  width: 100px;
+  height: 200px;
+  border: 1px solid red;
+  overflow: hidden;
+}
