@@ -1,0 +1,114 @@
+html {
+  height: 100%;
+}
+html article {
+  padding: 30px;
+}
+html body > header {
+  display: flex;
+  justify-content: space-between;
+  background: brown;
+}
+html body > header h1 {
+  font-size: 8em;
+  align-self: center;
+  padding: 100px;
+}
+html aside {
+  background: brown;
+  padding: 20px;
+}
+html main {
+  overflow: hidden;
+  padding: 30px;
+}
+html main nav ul {
+  margin-bottom: 20px;
+}
+html main nav ul li {
+  font-size: 2em;
+}
+html main nav ul li:after {
+  content: ">";
+  margin: 10px;
+}
+html main > h1 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+html #main_section article {
+  flex: 1;
+  padding: 30px;
+  text-align: justify;
+}
+html #main_section article img {
+  margin: 0px auto;
+  display: block;
+  margin: 20px;
+}
+html .twocols {
+  flex: 2;
+}
+html .twocols h2 {
+  display: block;
+  font-size: 2em;
+}
+html .twocols p {
+  columns: 2;
+  display: block;
+}
+html .highlighted {
+  flex: 1;
+  background-color: brown;
+}
+html .row {
+  display: flex;
+}
+html .product_list {
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: strech;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+html .product_list:before {
+  content: "";
+  display: block;
+  width: calc(100% + 60px );
+  border-top: 1px solid brown;
+  position: absolute;
+  top: 0px;
+  left: -30px;
+}
+html .product_list article {
+  border: 1px solid brown;
+  border-radius: 20px;
+  align-items: center;
+  background-color: #c08383;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+html .product_list article header {
+  width: 100%;
+  font-size: 2em;
+  font-weight: bold;
+}
+html .product_list article figure {
+  flex: 1;
+}
+html .product_list article p {
+  flex: 2;
+}
+html footer {
+  background-color: brown;
+  padding: 40px;
+}
+html footer ul {
+  display: flex;
+  justify-content: space-around;
+}

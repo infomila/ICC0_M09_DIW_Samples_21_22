@@ -1,0 +1,119 @@
+html {
+    height: 100%;
+ 
+    article {
+        padding: 30px;
+    }
+
+    body>header {
+        display:flex;
+        justify-content: space-between;
+        background: brown;
+        h1 {
+            font-size: 8em;
+            align-self: center;
+            padding: 100px;
+        }
+    }
+    aside {
+        background: brown;
+        padding: 20px;
+    }
+@main_padding:30px;
+    main {
+        overflow: hidden;
+        padding: @main_padding;
+        nav {
+            ul{
+                margin-bottom: 20px;
+                li {
+                    font-size:2em;
+                }
+                li:after {
+                    content:">";
+                    margin: 10px;
+                    //font-size:2em;
+                }
+            }
+        }
+        >h1{
+            text-align: center;            
+            font-size:3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+    }
+    #main_section {
+        article {
+            flex:1;
+            padding: 30px;
+            text-align: justify;
+            img {
+               margin:0px auto;
+               display: block;
+               margin: 20px;
+            }
+        }
+    }
+    .twocols{
+     flex:2;   
+
+     h2 {
+         display: block;
+         font-size: 2em;
+     }
+     p {
+        columns: 2;
+        display: block;
+     }
+    }
+    .highlighted{
+        flex:1;
+        background-color: brown;
+    }
+    .row {
+        display:flex;
+    }
+    .product_list {
+        padding-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content:strech;
+        justify-content:center;
+        gap:20px;
+        position: relative;
+        &:before {
+            content:"";
+            display: block;
+            width: ~"calc(100% +" ( 2 * @main_padding ) ~")";
+            border-top:1px solid brown;
+            position:absolute;
+            top:0px;
+            left:-@main_padding;
+        }
+        article {
+            border:1px solid brown;
+            border-radius:20px;
+            align-items: center;
+            background-color:rgb(192, 131, 131);
+            width: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            header{ width:100%;font-size:2em;font-weight: bold;}
+            figure{ flex:1;}
+            p{flex:2;}
+        }
+
+    }
+
+    footer {
+
+        background-color:brown;
+        padding: 40px;
+        ul {
+            display:flex;
+            justify-content: space-around;
+        }
+    }
+}

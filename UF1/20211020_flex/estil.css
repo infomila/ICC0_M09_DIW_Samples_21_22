@@ -1,0 +1,30 @@
+html {
+  height: 100%;
+}
+html ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+html ul .C {
+  order: 1;
+  flex: 50;
+  align-self: flex-start;
+}
+html ul .B {
+  order: 2;
+  width: 15%;
+}
+html ul .A {
+  order: 2;
+  flex: 25;
+}
+html ul li {
+  padding: 10px;
+  border: 1px solid grey;
+}
+html ul li ul {
+  height: 400px;
+  align-content: flex-start;
+  justify-content: center;
+  gap: 10px;
+}

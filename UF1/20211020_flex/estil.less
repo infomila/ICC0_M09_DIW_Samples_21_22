@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        .C {
+            order: 1;
+            flex: 50;
+            align-self: flex-start;
+        }
+
+        .B {
+            order: 2;
+            width: 15%;
+        }
+
+        .A {
+            order: 2;
+            flex: 25;
+        }
+
+        li {
+            padding: 10px;
+            border: 1px solid grey;
+
+            ul {
+                height: 400px;
+                align-content: flex-start;
+                justify-content: center;
+                gap: 10px;
+            }
+        }
+    }
+}

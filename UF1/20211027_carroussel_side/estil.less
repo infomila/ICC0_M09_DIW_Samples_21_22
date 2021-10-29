@@ -1,0 +1,92 @@
+html {
+    height: 100%;
+
+    .carroussel {
+        input[type=radio] {
+
+            display: none;
+        }
+
+        input[type=radio]:nth-child(1):checked~.carroussel-inner>article:nth-of-type(1) {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+
+        input[type=radio]:nth-child(2):checked~.carroussel-inner>article:nth-of-type(2) {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        input[type=radio]:nth-child(3):checked~.carroussel-inner>article:nth-of-type(3) {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        input[type=radio]:nth-child(1):checked~.carroussel-inner li:nth-child(1)>label {
+            background-color: black;
+        }
+
+        input[type=radio]:nth-child(2):checked~.carroussel-inner li:nth-child(2)>label {
+            background-color: black;
+        }
+
+        input[type=radio]:nth-child(3):checked~.carroussel-inner li:nth-child(3)>label {
+            background-color: black;
+        }
+
+        .carroussel-inner {
+
+            position: relative;
+
+            ul {
+                position: absolute;
+                z-index: 1000;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+
+                label {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: white;
+                    border: 3px solid white;
+                    margin: 20px;
+                }
+            }
+
+            article:nth-of-type(1) {
+                position: relative;
+            }
+
+            article {
+                opacity: 0;
+                transform: scaleX(0);
+                transition: opacity 1s linear, transform 1s;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+
+                img {
+
+                    display: block;
+                    width: 100%;
+                }
+
+                h1 {
+                    position: absolute;
+                    display: block;
+                    bottom: 20px;
+                    left: 20px;
+                    font-size: 80px;
+                    color: white;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}
