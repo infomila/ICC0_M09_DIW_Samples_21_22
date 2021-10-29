@@ -1,61 +1,307 @@
 html {
   height: 100%;
 }
+html .carroussel {
+  /*
+        input[type=radio]:nth-child(1):checked~.carroussel-inner .panel {
+            left: 0%;
+        }
+
+        input[type=radio]:nth-child(2):checked~.carroussel-inner .panel {
+            left: -100%;
+        }
+
+        input[type=radio]:nth-child(3):checked~.carroussel-inner .panel {
+            left: -200%;
+        }
+        
+
+        input[type=radio]:nth-child(1):checked~.carroussel-inner li:nth-child(1)>label {
+            background-color: black;
+        }
+
+        input[type=radio]:nth-child(2):checked~.carroussel-inner li:nth-child(2)>label {
+            background-color: black;
+        }
+
+        input[type=radio]:nth-child(3):checked~.carroussel-inner li:nth-child(3)>label {
+            background-color: black;
+        }
+*/
+}
 html .carroussel input[type=radio] {
   display: none;
 }
-html .carroussel input[type=radio]:nth-child(1):checked ~ .carroussel-inner > article:nth-of-type(1) {
-  opacity: 1;
-  transform: scaleX(1);
+html .carroussel input[type=radio]:nth-child(40):checked ~ .carroussel-inner .panel {
+  left: -3900%;
 }
-html .carroussel input[type=radio]:nth-child(2):checked ~ .carroussel-inner > article:nth-of-type(2) {
-  opacity: 1;
-  transform: scaleX(1);
-}
-html .carroussel input[type=radio]:nth-child(3):checked ~ .carroussel-inner > article:nth-of-type(3) {
-  opacity: 1;
-  transform: scaleX(1);
-}
-html .carroussel input[type=radio]:nth-child(1):checked ~ .carroussel-inner li:nth-child(1) > label {
+html .carroussel input[type=radio]:nth-child(40):checked ~ .carroussel-inner li:nth-child(40) > label {
   background-color: black;
 }
-html .carroussel input[type=radio]:nth-child(2):checked ~ .carroussel-inner li:nth-child(2) > label {
+html .carroussel input[type=radio]:nth-child(39):checked ~ .carroussel-inner .panel {
+  left: -3800%;
+}
+html .carroussel input[type=radio]:nth-child(39):checked ~ .carroussel-inner li:nth-child(39) > label {
   background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(38):checked ~ .carroussel-inner .panel {
+  left: -3700%;
+}
+html .carroussel input[type=radio]:nth-child(38):checked ~ .carroussel-inner li:nth-child(38) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(37):checked ~ .carroussel-inner .panel {
+  left: -3600%;
+}
+html .carroussel input[type=radio]:nth-child(37):checked ~ .carroussel-inner li:nth-child(37) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(36):checked ~ .carroussel-inner .panel {
+  left: -3500%;
+}
+html .carroussel input[type=radio]:nth-child(36):checked ~ .carroussel-inner li:nth-child(36) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(35):checked ~ .carroussel-inner .panel {
+  left: -3400%;
+}
+html .carroussel input[type=radio]:nth-child(35):checked ~ .carroussel-inner li:nth-child(35) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(34):checked ~ .carroussel-inner .panel {
+  left: -3300%;
+}
+html .carroussel input[type=radio]:nth-child(34):checked ~ .carroussel-inner li:nth-child(34) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(33):checked ~ .carroussel-inner .panel {
+  left: -3200%;
+}
+html .carroussel input[type=radio]:nth-child(33):checked ~ .carroussel-inner li:nth-child(33) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(32):checked ~ .carroussel-inner .panel {
+  left: -3100%;
+}
+html .carroussel input[type=radio]:nth-child(32):checked ~ .carroussel-inner li:nth-child(32) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(31):checked ~ .carroussel-inner .panel {
+  left: -3000%;
+}
+html .carroussel input[type=radio]:nth-child(31):checked ~ .carroussel-inner li:nth-child(31) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(30):checked ~ .carroussel-inner .panel {
+  left: -2900%;
+}
+html .carroussel input[type=radio]:nth-child(30):checked ~ .carroussel-inner li:nth-child(30) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(29):checked ~ .carroussel-inner .panel {
+  left: -2800%;
+}
+html .carroussel input[type=radio]:nth-child(29):checked ~ .carroussel-inner li:nth-child(29) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(28):checked ~ .carroussel-inner .panel {
+  left: -2700%;
+}
+html .carroussel input[type=radio]:nth-child(28):checked ~ .carroussel-inner li:nth-child(28) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(27):checked ~ .carroussel-inner .panel {
+  left: -2600%;
+}
+html .carroussel input[type=radio]:nth-child(27):checked ~ .carroussel-inner li:nth-child(27) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(26):checked ~ .carroussel-inner .panel {
+  left: -2500%;
+}
+html .carroussel input[type=radio]:nth-child(26):checked ~ .carroussel-inner li:nth-child(26) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(25):checked ~ .carroussel-inner .panel {
+  left: -2400%;
+}
+html .carroussel input[type=radio]:nth-child(25):checked ~ .carroussel-inner li:nth-child(25) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(24):checked ~ .carroussel-inner .panel {
+  left: -2300%;
+}
+html .carroussel input[type=radio]:nth-child(24):checked ~ .carroussel-inner li:nth-child(24) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(23):checked ~ .carroussel-inner .panel {
+  left: -2200%;
+}
+html .carroussel input[type=radio]:nth-child(23):checked ~ .carroussel-inner li:nth-child(23) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(22):checked ~ .carroussel-inner .panel {
+  left: -2100%;
+}
+html .carroussel input[type=radio]:nth-child(22):checked ~ .carroussel-inner li:nth-child(22) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(21):checked ~ .carroussel-inner .panel {
+  left: -2000%;
+}
+html .carroussel input[type=radio]:nth-child(21):checked ~ .carroussel-inner li:nth-child(21) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(20):checked ~ .carroussel-inner .panel {
+  left: -1900%;
+}
+html .carroussel input[type=radio]:nth-child(20):checked ~ .carroussel-inner li:nth-child(20) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(19):checked ~ .carroussel-inner .panel {
+  left: -1800%;
+}
+html .carroussel input[type=radio]:nth-child(19):checked ~ .carroussel-inner li:nth-child(19) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(18):checked ~ .carroussel-inner .panel {
+  left: -1700%;
+}
+html .carroussel input[type=radio]:nth-child(18):checked ~ .carroussel-inner li:nth-child(18) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(17):checked ~ .carroussel-inner .panel {
+  left: -1600%;
+}
+html .carroussel input[type=radio]:nth-child(17):checked ~ .carroussel-inner li:nth-child(17) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(16):checked ~ .carroussel-inner .panel {
+  left: -1500%;
+}
+html .carroussel input[type=radio]:nth-child(16):checked ~ .carroussel-inner li:nth-child(16) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(15):checked ~ .carroussel-inner .panel {
+  left: -1400%;
+}
+html .carroussel input[type=radio]:nth-child(15):checked ~ .carroussel-inner li:nth-child(15) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(14):checked ~ .carroussel-inner .panel {
+  left: -1300%;
+}
+html .carroussel input[type=radio]:nth-child(14):checked ~ .carroussel-inner li:nth-child(14) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(13):checked ~ .carroussel-inner .panel {
+  left: -1200%;
+}
+html .carroussel input[type=radio]:nth-child(13):checked ~ .carroussel-inner li:nth-child(13) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(12):checked ~ .carroussel-inner .panel {
+  left: -1100%;
+}
+html .carroussel input[type=radio]:nth-child(12):checked ~ .carroussel-inner li:nth-child(12) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(11):checked ~ .carroussel-inner .panel {
+  left: -1000%;
+}
+html .carroussel input[type=radio]:nth-child(11):checked ~ .carroussel-inner li:nth-child(11) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(10):checked ~ .carroussel-inner .panel {
+  left: -900%;
+}
+html .carroussel input[type=radio]:nth-child(10):checked ~ .carroussel-inner li:nth-child(10) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(9):checked ~ .carroussel-inner .panel {
+  left: -800%;
+}
+html .carroussel input[type=radio]:nth-child(9):checked ~ .carroussel-inner li:nth-child(9) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(8):checked ~ .carroussel-inner .panel {
+  left: -700%;
+}
+html .carroussel input[type=radio]:nth-child(8):checked ~ .carroussel-inner li:nth-child(8) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(7):checked ~ .carroussel-inner .panel {
+  left: -600%;
+}
+html .carroussel input[type=radio]:nth-child(7):checked ~ .carroussel-inner li:nth-child(7) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(6):checked ~ .carroussel-inner .panel {
+  left: -500%;
+}
+html .carroussel input[type=radio]:nth-child(6):checked ~ .carroussel-inner li:nth-child(6) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(5):checked ~ .carroussel-inner .panel {
+  left: -400%;
+}
+html .carroussel input[type=radio]:nth-child(5):checked ~ .carroussel-inner li:nth-child(5) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(4):checked ~ .carroussel-inner .panel {
+  left: -300%;
+}
+html .carroussel input[type=radio]:nth-child(4):checked ~ .carroussel-inner li:nth-child(4) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(3):checked ~ .carroussel-inner .panel {
+  left: -200%;
 }
 html .carroussel input[type=radio]:nth-child(3):checked ~ .carroussel-inner li:nth-child(3) > label {
   background-color: black;
 }
+html .carroussel input[type=radio]:nth-child(2):checked ~ .carroussel-inner .panel {
+  left: -100%;
+}
+html .carroussel input[type=radio]:nth-child(2):checked ~ .carroussel-inner li:nth-child(2) > label {
+  background-color: black;
+}
+html .carroussel input[type=radio]:nth-child(1):checked ~ .carroussel-inner .panel {
+  left: 0%;
+}
+html .carroussel input[type=radio]:nth-child(1):checked ~ .carroussel-inner li:nth-child(1) > label {
+  background-color: black;
+}
 html .carroussel .carroussel-inner {
   position: relative;
+  overflow: hidden;
+}
+html .carroussel .carroussel-inner .panel {
+  display: flex;
+  position: relative;
+  transition: left 1s;
 }
 html .carroussel .carroussel-inner ul {
   position: absolute;
   z-index: 1000;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
 }
 html .carroussel .carroussel-inner ul label {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: white;
   border: 3px solid white;
-  margin: 20px;
-}
-html .carroussel .carroussel-inner article:nth-of-type(1) {
-  position: relative;
+  margin: 10px;
 }
 html .carroussel .carroussel-inner article {
-  opacity: 0;
-  transform: scaleX(0);
-  transition: opacity 1s linear, transform 1s;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  position: relative;
   width: 100%;
+  flex: 1 0 auto;
 }
 html .carroussel .carroussel-inner article img {
   display: block;

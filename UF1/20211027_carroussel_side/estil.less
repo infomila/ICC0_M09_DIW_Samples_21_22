@@ -7,21 +7,35 @@ html {
             display: none;
         }
 
-        input[type=radio]:nth-child(1):checked~.carroussel-inner>article:nth-of-type(1) {
-            opacity: 1;
-            transform: scaleX(1);
+        @numero_articles: 40;
+
+        .checks (@i) when (@i > 0) {
+            input[type=radio]:nth-child(@{i}):checked~.carroussel-inner .panel {
+                left: -100% * (@i - 1);
+            }
+
+            input[type=radio]:nth-child(@{i}):checked~.carroussel-inner li:nth-child(@{i})>label {
+                background-color: black;
+            }
+
+            .checks(@i - 1);
         }
 
+        .checks(@numero_articles);
 
-        input[type=radio]:nth-child(2):checked~.carroussel-inner>article:nth-of-type(2) {
-            opacity: 1;
-            transform: scaleX(1);
+        /*
+        input[type=radio]:nth-child(1):checked~.carroussel-inner .panel {
+            left: 0%;
         }
 
-        input[type=radio]:nth-child(3):checked~.carroussel-inner>article:nth-of-type(3) {
-            opacity: 1;
-            transform: scaleX(1);
+        input[type=radio]:nth-child(2):checked~.carroussel-inner .panel {
+            left: -100%;
         }
+
+        input[type=radio]:nth-child(3):checked~.carroussel-inner .panel {
+            left: -200%;
+        }
+        
 
         input[type=radio]:nth-child(1):checked~.carroussel-inner li:nth-child(1)>label {
             background-color: black;
@@ -34,42 +48,43 @@ html {
         input[type=radio]:nth-child(3):checked~.carroussel-inner li:nth-child(3)>label {
             background-color: black;
         }
-
+*/
         .carroussel-inner {
 
             position: relative;
+            overflow: hidden;
+
+            .panel {
+                display: flex;
+                position: relative;
+                transition: left 1s;
+            }
 
             ul {
                 position: absolute;
                 z-index: 1000;
-                bottom: 20px;
+                bottom: 10px;
                 left: 50%;
                 transform: translateX(-50%);
                 display: flex;
 
                 label {
                     display: block;
-                    width: 50px;
-                    height: 50px;
+                    width: 20px;
+                    height: 20px;
                     border-radius: 50%;
                     background-color: white;
                     border: 3px solid white;
-                    margin: 20px;
+                    margin: 10px;
                 }
             }
 
-            article:nth-of-type(1) {
-                position: relative;
-            }
+
 
             article {
-                opacity: 0;
-                transform: scaleX(0);
-                transition: opacity 1s linear, transform 1s;
-                position: absolute;
-                top: 0px;
-                left: 0px;
+                position: relative;
                 width: 100%;
+                flex: 1 0 auto; // cada element respecta el seu width
 
                 img {
 
