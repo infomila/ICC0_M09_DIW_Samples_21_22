@@ -1,0 +1,60 @@
+body {
+  max-width: 1000px;
+  margin: 0px auto;
+}
+body header .hamburguer {
+  display: none;
+}
+body header ul {
+  display: flex;
+  justify-content: center;
+  transition: height 1s;
+}
+body header ul li {
+  display: block;
+  padding: 20px;
+  font-size: 30px;
+}
+body section {
+  display: flex;
+  flex-wrap: wrap;
+}
+body section article {
+  width: 33.33%;
+}
+body section article img {
+  width: 100%;
+}
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  body section article {
+    width: 50%;
+    background-color: lime;
+  }
+}
+@media screen and (max-width: 600px) {
+  body header .hamburguer {
+    display: inline-block;
+    padding: 20px;
+    font-size: 40px;
+  }
+  body header .hamburguer:hover {
+    background-color: rebeccapurple;
+  }
+  body header .hamburguer:hover ~ ul {
+    height: auto;
+  }
+  body header ul {
+    flex-direction: column;
+    height: 0px;
+    overflow: hidden;
+  }
+  body header ul li:hover {
+    background-color: rebeccapurple;
+  }
+  body header ul:hover {
+    height: auto;
+  }
+  body section article {
+    width: 100%;
+  }
+}

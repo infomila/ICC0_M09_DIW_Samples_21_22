@@ -1,0 +1,149 @@
+html {
+  height: 100%;
+}
+html article {
+  padding: 30px;
+}
+html body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header" "menu menu" "sidebar contents" "footer footer";
+}
+html body > header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  background: brown;
+}
+html body > header h1 {
+  font-size: 8em;
+  align-self: center;
+  padding: 100px;
+}
+html body > nav {
+  grid-area: menu;
+  background-color: lime;
+}
+html body > nav ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2em;
+}
+html body > nav ul li {
+  padding: 30px;
+}
+html aside {
+  grid-area: sidebar;
+  background: brown;
+  padding: 20px;
+}
+html main {
+  grid-area: contents;
+  overflow: hidden;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "breadcrumb breadcrumb breadcrumb" "title title title " "main main main" "twocols twocols highlighted" "products products products";
+}
+html main nav {
+  grid-area: breadcrumb;
+}
+html main nav ul {
+  margin-bottom: 20px;
+}
+html main nav ul li {
+  font-size: 2em;
+}
+html main nav ul li:after {
+  content: ">";
+  margin: 10px;
+}
+html main > h1 {
+  grid-area: title;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+html #main_section {
+  grid-area: main;
+  display: flex;
+}
+html #main_section article {
+  flex: 1;
+  padding: 30px;
+  text-align: justify;
+}
+html #main_section article img {
+  margin: 0px auto;
+  display: block;
+  margin: 20px;
+}
+html .twocols {
+  grid-area: twocols;
+}
+html .twocols h2 {
+  display: block;
+  font-size: 2em;
+}
+html .twocols p {
+  columns: 2;
+  display: block;
+}
+html .highlighted {
+  grid-area: highlighted;
+  background-color: brown;
+}
+html .row {
+  display: flex;
+}
+html .product_list {
+  grid-area: products;
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: strech;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+html .product_list:before {
+  content: "";
+  display: block;
+  width: calc(100% + 60px );
+  border-top: 1px solid brown;
+  position: absolute;
+  top: 0px;
+  left: -30px;
+}
+html .product_list article {
+  border: 1px solid brown;
+  border-radius: 20px;
+  align-items: center;
+  background-color: #c08383;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+html .product_list article header {
+  width: 100%;
+  font-size: 2em;
+  font-weight: bold;
+}
+html .product_list article figure {
+  flex: 1;
+}
+html .product_list article p {
+  flex: 2;
+}
+html footer {
+  grid-area: footer;
+  background-color: brown;
+  padding: 40px;
+}
+html footer ul {
+  display: flex;
+  justify-content: space-around;
+}

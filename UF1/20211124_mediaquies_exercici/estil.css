@@ -1,0 +1,91 @@
+#com_iesmila_mediaqueries {
+  --margin: 10px;
+}
+#com_iesmila_mediaqueries header,
+#com_iesmila_mediaqueries footer {
+  background-color: lime;
+  padding: 20px;
+  margin: 10px;
+}
+#com_iesmila_mediaqueries img {
+  width: 100%;
+  margin-top: 10px;
+}
+#com_iesmila_mediaqueries nav.hidden_menu {
+  display: none;
+}
+#com_iesmila_mediaqueries nav ul {
+  display: flex;
+  flex-direction: column;
+}
+#com_iesmila_mediaqueries nav ul li {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid black;
+  text-align: center;
+}
+#com_iesmila_mediaqueries main {
+  display: flex;
+  flex-direction: column;
+}
+#com_iesmila_mediaqueries main #leftc,
+#com_iesmila_mediaqueries main #rightc,
+#com_iesmila_mediaqueries main #contents {
+  padding: 20px;
+  margin: var(--margin);
+}
+#com_iesmila_mediaqueries main #leftc h2,
+#com_iesmila_mediaqueries main #rightc h2,
+#com_iesmila_mediaqueries main #contents h2,
+#com_iesmila_mediaqueries main #leftc h1,
+#com_iesmila_mediaqueries main #rightc h1,
+#com_iesmila_mediaqueries main #contents h1 {
+  font-weight: bold;
+  font-size: 120%;
+}
+#com_iesmila_mediaqueries main #leftc {
+  background-color: orange;
+  order: 1;
+}
+#com_iesmila_mediaqueries main #rightc {
+  background-color: plum;
+}
+#com_iesmila_mediaqueries main #contents {
+  background-color: aqua;
+}
+@media (min-width: 600px) {
+  #com_iesmila_mediaqueries main {
+    flex-direction: row;
+  }
+  #com_iesmila_mediaqueries #menuHandler {
+    display: none;
+  }
+  #com_iesmila_mediaqueries nav.hidden_menu {
+    display: block;
+  }
+  #com_iesmila_mediaqueries nav ul {
+    flex-direction: row;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  #com_iesmila_mediaqueries main {
+    flex-wrap: wrap;
+  }
+  #com_iesmila_mediaqueries main #leftc,
+  #com_iesmila_mediaqueries main #rightc {
+    width: calc(50% - 2 * var(--margin));
+    box-sizing: border-box;
+  }
+  #com_iesmila_mediaqueries main #contents {
+    width: 100%;
+    order: 1;
+  }
+}
+@media (min-width: 1100px) {
+  #com_iesmila_mediaqueries main {
+    max-width: 1100px;
+    margin: 0px auto;
+    padding: 10px;
+  }
+}

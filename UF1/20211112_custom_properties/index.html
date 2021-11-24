@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="reset.css" />
+	<link rel="stylesheet" type="text/css" href="estil.css" />
+</head>
+
+<body id="pagina">
+
+	<article class="twocols" style="--back_image:url('https://picsum.photos/800/600?n=0');">
+		<h2>Subtítol</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales ex in lacus mollis, in
+			aliquam sapien ultrices. Cras eget elementum tellus. Integer eget nunc sit amet dui molestie
+			pellentesque ut maximus mi. Sed congue justo vel massa sollicitudin molestie. Nam sagittis placerat
+			consequat. Duis porta placerat sem. Pellentesque sit amet arcu accumsan, blandit dolor quis,
+			fermentum dui.</p>
+	</article>
+	<article class="twocols" style="--back_image:url('https://www.fillmurray.com/640/360');">
+		<h2>Subtítol</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales ex in lacus mollis, in
+			aliquam sapien ultrices. Cras eget elementum tellus. Integer eget nunc sit amet dui molestie
+			pellentesque ut maximus mi. Sed congue justo vel massa sollicitudin molestie. Nam sagittis placerat
+			consequat. Duis porta placerat sem. Pellentesque sit amet arcu accumsan, blandit dolor quis,
+			fermentum dui.</p>
+	</article>
+	<script>
+		function onMouseMove(e) {
+			var angleX = (.5 - (e.clientX / window.innerWidth)) * 180;
+			document.getElementById("pagina").style.setProperty("--rotacio", angleX);
+		};
+		window.addEventListener('mousemove', this.onMouseMove.bind(this));
+	</script>
+</body>
+
+</html>

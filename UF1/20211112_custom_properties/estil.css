@@ -1,0 +1,29 @@
+html:hover {
+  --art_background: rgba(0, 255, 0, 0.226);
+}
+
+html h2 {
+  background-color: var(--art_background);
+  --art_background: rgba(255, 0, 0, 0.123);
+  --mida-relativa: 0.3;
+  text-align: center;
+  font-size: calc(100vw * var(--mida-relativa));
+}
+
+html h2:hover {
+  --mida-relativa: 0.4;
+}
+
+html article {
+  margin: 40px;
+  background-color: var(--art_background);
+  background-image: var(--back_image);
+  background-size: cover;
+  transform: rotate(calc(var(--rotacio, 0) * 1deg));
+}
+
+html article p::before {
+  content: "D" var(--rotacio);
+  color: red;
+  display: block;
+}
