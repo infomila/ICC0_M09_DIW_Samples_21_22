@@ -1,0 +1,60 @@
+body {
+  --color_persona: #d49ad4f3;
+  --amplada_abdomen: 80px;
+  --alsada_abdomen: 130px;
+}
+body .cos {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+body .cos div {
+  background-color: var(--color_persona);
+}
+body .cos .abdomen {
+  position: relative;
+  width: var(--amplada_abdomen);
+  height: var(--alsada_abdomen);
+}
+body .cos .abdomen .cap {
+  position: absolute;
+  left: calc(var(--amplada_abdomen)*0.1);
+  bottom: 100%;
+  width: calc(var(--amplada_abdomen)*0.8);
+  height: calc(var(--amplada_abdomen)*0.8);
+  border-radius: 50%;
+}
+body .cos .abdomen .cama {
+  position: absolute;
+  left: 15%;
+  width: 70%;
+  height: calc(var(--alsada_abdomen)*0.7);
+  top: 100%;
+}
+body .cos .abdomen .cama .genoll {
+  position: absolute;
+  top: 90%;
+  left: calc(var(--amplada_abdomen)*0.1);
+  border-radius: 50%;
+  width: calc(var(--amplada_abdomen)*0.5);
+  height: calc(var(--amplada_abdomen)*0.5);
+}
+body .cos .abdomen .cama .genoll .inferior {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: calc(var(--alsada_abdomen)*0.7);
+  top: 100%;
+}
+body .cos .abdomen .cama .genoll .inferior .peu {
+  position: absolute;
+  top: 100%;
+  width: 170%;
+  height: 30px;
+}
+body .abdomen .inferior {
+  transform-origin: 50% 0%;
+}
+body .abdomen .cama {
+  transform-origin: 50% 0%;
+}

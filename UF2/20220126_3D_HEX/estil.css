@@ -1,0 +1,157 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: red;
+  /*
+    input[type="radio"]:nth-child(1):checked~main .cub {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+
+    input[type="radio"]:nth-child(2):checked~main .cub {
+        transform: rotateX(-20deg) rotateY(@angle);
+    }
+
+    input[type="radio"]:nth-child(3):checked~main .cub {
+        transform: rotateX(-20deg) rotateY(@angle*2);
+    }*/
+}
+body nav {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  padding: 40px;
+  transform: translateX(-50%);
+}
+body nav label {
+  margin: 20px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+}
+body input[type="radio"]:nth-child(8):checked ~ main .cub {
+  transform: rotateX(0deg) rotateY(315deg);
+}
+body input[type="radio"]:nth-child(7):checked ~ main .cub {
+  transform: rotateX(0deg) rotateY(270deg);
+}
+body input[type="radio"]:nth-child(6):checked ~ main .cub {
+  transform: rotateX(0deg) rotateY(225deg);
+}
+body input[type="radio"]:nth-child(5):checked ~ main .cub {
+  transform: rotateX(0deg) rotateY(180deg);
+}
+body input[type="radio"]:nth-child(4):checked ~ main .cub {
+  transform: rotateX(0deg) rotateY(135deg);
+}
+body input[type="radio"]:nth-child(3):checked ~ main .cub {
+  transform: rotateX(0deg) rotateY(90deg);
+}
+body input[type="radio"]:nth-child(2):checked ~ main .cub {
+  transform: rotateX(0deg) rotateY(45deg);
+}
+body input[type="radio"]:nth-child(1):checked ~ main .cub {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+body input[type="radio"] {
+  display: none;
+}
+body:hover .cara {
+  padding-bottom: 200px !important;
+  background-color: rgba(0, 0, 255, 0.233);
+}
+body main {
+  padding: 100px;
+  perspective: 600px;
+}
+body main .cub {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 3s;
+  /*
+            .cara:nth-child(1) {
+                transform: rotateY(@angle*0) translateZ(@h);
+            }
+
+            .cara:nth-child(2) {
+                transform: rotateY(@angle*1) translateZ(@h);
+            }
+
+            .cara:nth-child(3) {
+                transform: rotateY(@angle*2) translateZ(@h);
+            }
+
+            .cara:nth-child(4) {
+                transform: rotateY(@angle*3) translateZ(@h);
+            }
+
+            .cara:nth-child(5) {
+                transform: rotateY(@angle*4) translateZ(@h);
+            }
+
+            .cara:nth-child(6) {
+                transform: rotateY(@angle*5) translateZ(@h);
+            }
+*/
+}
+body main .cub .cara {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: opacity 2s, padding-bottom 2s;
+  padding-bottom: 0px;
+  bottom: 0px;
+}
+body main .cub .cara img {
+  display: block;
+}
+body main .cub .cara:hover {
+  /* transition: opacity 2s, padding-bottom 2s linear;
+                    padding-bottom: @amplada;
+                    background-color: rgba(0, 0, 255, 0.233)*/
+}
+body main .cub .cara:hover img {
+  transition: transform 2s ease-in;
+  transform-origin: 0% 0%;
+  transform: rotateY(90deg);
+}
+body main .cub .cara:nth-child(8) {
+  transform: rotateY(315deg) translateZ(241.42135624px);
+  transition-delay: 16s;
+}
+body main .cub .cara:nth-child(7) {
+  transform: rotateY(270deg) translateZ(241.42135624px);
+  transition-delay: 14s;
+}
+body main .cub .cara:nth-child(6) {
+  transform: rotateY(225deg) translateZ(241.42135624px);
+  transition-delay: 12s;
+}
+body main .cub .cara:nth-child(5) {
+  transform: rotateY(180deg) translateZ(241.42135624px);
+  transition-delay: 10s;
+}
+body main .cub .cara:nth-child(4) {
+  transform: rotateY(135deg) translateZ(241.42135624px);
+  transition-delay: 8s;
+}
+body main .cub .cara:nth-child(3) {
+  transform: rotateY(90deg) translateZ(241.42135624px);
+  transition-delay: 6s;
+}
+body main .cub .cara:nth-child(2) {
+  transform: rotateY(45deg) translateZ(241.42135624px);
+  transition-delay: 4s;
+}
+body main .cub .cara:nth-child(1) {
+  transform: rotateY(0deg) translateZ(241.42135624px);
+  transition-delay: 2s;
+}

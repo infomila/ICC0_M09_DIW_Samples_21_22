@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+body main {
+  perspective: 600px;
+  perspective-origin: 25% 75%;
+}
+body main .card {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg) rotateX(-20deg);
+  transition: transform 1s;
+}
+body main .card:hover {
+  transform: rotateY(180deg);
+}
+body main .card:hover .star {
+  transform: rotateY(180deg) translateZ(200px);
+}
+body main .card .star {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 50px;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  transition: transform 1s;
+  transform: rotateY(0deg) translateZ(200px);
+}
+body main .card .card_face,
+body main .card .back_face {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 200px;
+  background-color: red;
+  border: 1px solid black;
+  transform: rotateY(0deg);
+  border-radius: 15px;
+}
+body main .card .back_face {
+  background-color: green;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}

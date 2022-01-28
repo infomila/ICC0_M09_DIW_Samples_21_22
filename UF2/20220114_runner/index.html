@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="reset.css" />
+	<link rel="stylesheet" type="text/css" href="estil.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		var angle = 0;
+		var xAnterior = 0;
+
+		$(document).ready(function () {
+			$(document).mousemove(function (event) {
+				var angleEndavant = -50;
+				var angleEnrere = +60;
+
+
+
+				var incrementX = event.screenX - xAnterior;
+
+				if (incrementX > 0 && angle > angleEndavant) {
+					angle -= incrementX;
+				} else if (incrementX < 0 && angle < angleEnrere) {
+					angle -= incrementX
+				}
+				$("span").text(angle);
+				var angleInferior = 0;
+				if (angle > 0) {
+					angleInferiorEsquerra = 0;
+					angleInferior = 45 * angle / angleEnrere;
+				} else {
+					angleInferior = 0;
+					angleInferiorEsquerra = 45 * -angle / angleEnrere;
+				}
+
+
+				$('.dreta').css('transform', `rotate(${angle}deg)`);
+				$('.dreta .inferior').css('transform', `rotate(${angleInferior}deg)`);
+
+				$('.esquerra').css('transform', `rotate(${-angle}deg)`);
+				$('.esquerra .inferior').css('transform', `rotate(${angleInferiorEsquerra}deg)`)
+
+				xAnterior = event.screenX;
+
+				/*
+				
+				$('#l1').css('transform', `rotate(${angle}deg) translateY(var(--midaOrbita)) rotate(${angle * 2}deg) `);
+				$('#l2').css('transform', `rotate(${-angle + 20}deg) translateY(var(--midaOrbita)) rotate(${angle * 2}deg) `);
+				$('#l3').css('transform', `rotate(${angle / 2 + 60}deg) translateY(var(--midaOrbita)) rotate(${angle * 6}deg) `);
+				$('.terra').css('transform', `rotate(${angle / 4}deg)`);
+				*/
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<main>
+
+		<span></span>
+		<div class="cos">
+			<div class="abdomen">
+				<div class="cap"></div>
+				<div class="cama dreta">
+					<div class="genoll">
+						<div class="inferior">
+							<div class="peu"></div>
+						</div>
+					</div>
+				</div>
+				<div class="cama esquerra">
+					<div class="genoll">
+						<div class="inferior">
+							<div class="peu"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+</body>
+
+</html>

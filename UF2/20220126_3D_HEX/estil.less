@@ -1,0 +1,155 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: red;
+    @amplada: 200px;
+    @meitat_amplada: (@amplada/2);
+    @N: 8;
+    @angle: (360deg / @N);
+
+    @h: (@meitat_amplada / tan(@angle/2));
+
+    nav {
+        display: flex;
+        position: fixed;
+        top: 0px;
+        left: 50%;
+        padding: 40px;
+        transform: translateX(-50%);
+
+        label {
+            margin: 20px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: black;
+        }
+    }
+
+    //--------------------------------
+    .radios(@N);
+
+    .radios (@i) when (@i > 0) {
+
+        input[type="radio"]:nth-child(@{i}):checked~main .cub {
+            transform: rotateX(-0deg) rotateY(@angle * (@i - 1));
+
+        }
+
+        .radios(@i - 1);
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    /*
+    input[type="radio"]:nth-child(1):checked~main .cub {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+
+    input[type="radio"]:nth-child(2):checked~main .cub {
+        transform: rotateX(-20deg) rotateY(@angle);
+    }
+
+    input[type="radio"]:nth-child(3):checked~main .cub {
+        transform: rotateX(-20deg) rotateY(@angle*2);
+    }*/
+    &:hover .cara {
+        //transition: opacity 2s, padding-bottom 2s linear;
+        padding-bottom: @amplada  !important;
+        background-color: rgba(0, 0, 255, 0.233)
+    }
+
+    main {
+        padding: 100px;
+
+
+
+        perspective: 600px;
+        //perspective-origin: 25% 75%;
+
+
+
+        .cub {
+            position: relative;
+            width: @amplada;
+            height: @amplada;
+            transform-style: preserve-3d;
+            transform: rotateX(-0deg) rotateY(0deg);
+            transition: transform 3s;
+
+
+
+            .cara {
+                position: absolute;
+                width: @amplada;
+                height: @amplada;
+                transform-style: preserve-3d;
+                transition: opacity 2s, padding-bottom 2s;
+                padding-bottom: 0px;
+                bottom: 0px;
+
+
+                img {
+                    display: block;
+                }
+
+                &:hover {
+
+                    /* transition: opacity 2s, padding-bottom 2s linear;
+                    padding-bottom: @amplada;
+                    background-color: rgba(0, 0, 255, 0.233)*/
+                    img {
+                        transition: transform 2s ease-in;
+                        transform-origin: 0% 0%;
+                        transform: rotateY(90deg);
+                    }
+                }
+            }
+
+            .childsTransform(@N);
+            /*
+            .cara:nth-child(1) {
+                transform: rotateY(@angle*0) translateZ(@h);
+            }
+
+            .cara:nth-child(2) {
+                transform: rotateY(@angle*1) translateZ(@h);
+            }
+
+            .cara:nth-child(3) {
+                transform: rotateY(@angle*2) translateZ(@h);
+            }
+
+            .cara:nth-child(4) {
+                transform: rotateY(@angle*3) translateZ(@h);
+            }
+
+            .cara:nth-child(5) {
+                transform: rotateY(@angle*4) translateZ(@h);
+            }
+
+            .cara:nth-child(6) {
+                transform: rotateY(@angle*5) translateZ(@h);
+            }
+*/
+
+
+            .childsTransform (@i) when (@i > 0) {
+                .cara:nth-child(@{i}) {
+                    transform: rotateY(@angle*(@i - 1)) translateZ(@h);
+                    transition-delay: (@i*2s);
+                }
+
+
+                .childsTransform(@i - 1);
+            }
+
+        }
+
+    }
+}

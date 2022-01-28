@@ -1,0 +1,13 @@
+body {
+  display: flex;
+}
+body .sprite {
+  width: 132px;
+  height: 166px;
+  background-image: url("images/sprite.png");
+  background-position: 1188px;
+}
+body .sprite:hover {
+  background-position: 0px;
+  transition: background-position 1s steps(9);
+}

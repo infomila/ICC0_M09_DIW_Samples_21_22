@@ -1,0 +1,30 @@
+body {
+  background-color: black;
+}
+body main {
+  --midaTerra: 200px;
+  --midaLluna: 150px;
+  --midaOrbita: calc(var(--midaLluna) * 2.5);
+}
+body main div {
+  width: var(--midaTerra);
+  height: var(--midaTerra);
+  position: absolute;
+  top: calc(50% - var(--midaTerra)/2);
+  left: calc(50% - var(--midaTerra)/2);
+}
+body main div.lluna {
+  width: var(--midaLluna);
+  height: var(--midaLluna);
+  top: calc(50% - var(--midaLluna)/2);
+  left: calc(50% - var(--midaLluna)/2);
+  z-index: 10;
+  transform: rotate(45deg) translateY(var(--midaOrbita));
+  background-image: url(images/moon.png);
+  background-position: center center;
+  background-size: cover;
+}
+body main div.terra {
+  background-image: url(images/earth.png);
+  background-position: center center;
+}

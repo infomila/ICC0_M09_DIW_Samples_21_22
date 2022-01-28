@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  --amplada: 200px;
+  --meitat_amplada: 100px;
+}
+body main {
+  perspective: 600px;
+  perspective-origin: 25% 75%;
+}
+body main:hover .cub {
+  transform: rotateY(50deg) rotateX(360deg);
+}
+body main .cub {
+  position: relative;
+  width: var(--amplada);
+  height: var(--amplada);
+  transform-style: preserve-3d;
+  transform: rotateY(30deg) rotateX(30deg);
+  transition: transform 1s;
+}
+body main .cub .cara {
+  position: absolute;
+  width: var(--amplada);
+  height: var(--amplada);
+  transform-style: preserve-3d;
+}
+body main .cub .front {
+  transform: translateZ(var(--meitat_amplada));
+}
+body main .cub .back {
+  transform: rotateY(180deg) translateZ(var(--meitat_amplada));
+}
+body main .cub .right {
+  transform: rotateY(90deg) translateZ(var(--meitat_amplada));
+}
+body main .cub .left {
+  transform: rotateY(-90deg) translateZ(var(--meitat_amplada));
+}
+body main .cub .top {
+  transform: rotateX(90deg) translateZ(var(--meitat_amplada));
+}
+body main .cub .bottom {
+  transform: rotateX(-90deg) translateZ(var(--meitat_amplada));
+}

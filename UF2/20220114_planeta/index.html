@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="reset.css" />
+	<link rel="stylesheet" type="text/css" href="estil.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(document).mousemove(function (event) {
+				var angle = (event.screenX / 3) % 360;
+				$('#l1').css('transform', `rotate(${angle}deg) translateY(var(--midaOrbita)) rotate(${angle * 2}deg) `);
+				$('#l2').css('transform', `rotate(${-angle + 20}deg) translateY(var(--midaOrbita)) rotate(${angle * 2}deg) `);
+				$('#l3').css('transform', `rotate(${angle / 2 + 60}deg) translateY(var(--midaOrbita)) rotate(${angle * 6}deg) `);
+				$('.terra').css('transform', `rotate(${angle / 4}deg)`);
+
+				//$("span").text(event.pageX + ", " + event.pageY);
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<main>
+		<span></span>
+		<div class="terra"></div>
+		<div class="lluna" id="l1"></div>
+		<div class="lluna" id="l2"></div>
+		<div class="lluna" id="l3"></div>
+	</main>
+</body>
+
+</html>
