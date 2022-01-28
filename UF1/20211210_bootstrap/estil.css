@@ -1,0 +1,16 @@
+#net_iesmila_demobootstrap header,
+#net_iesmila_demobootstrap footer {
+  background-color: lime;
+}
+#net_iesmila_demobootstrap nav li {
+  display: block;
+  font-size: 1.4em;
+}
+#net_iesmila_demobootstrap article,
+#net_iesmila_demobootstrap nav {
+  border: 10px solid black;
+  padding: 20px;
+}
+#net_iesmila_demobootstrap main ul li {
+  border: 10px solid black;
+}
