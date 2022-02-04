@@ -1,0 +1,100 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .hoveriano {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+body .hoveriano:hover img {
+  transform: translateY(40px);
+}
+body .hoveriano:hover h1,
+body .hoveriano:hover p {
+  transform: translateY(10px);
+}
+body .hoveriano:hover:after {
+  width: calc(100% - 80px * 0.5);
+  opacity: 1;
+}
+body .hoveriano:hover:before {
+  height: calc(100% - 80px * 0.5);
+  opacity: 1;
+}
+body .hoveriano:hover p,
+body .hoveriano:hover .filter {
+  opacity: 1;
+}
+body .hoveriano:after,
+body .hoveriano:before {
+  transition: all 0.5s;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 12;
+  opacity: 0;
+}
+body .hoveriano::after {
+  width: 0%;
+  height: 70%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+body .hoveriano:before {
+  width: calc(100% - 80px);
+  height: 0%;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+body .hoveriano h1,
+body .hoveriano p,
+body .hoveriano filter,
+body .hoveriano img {
+  transition: all 0.5s;
+}
+body .hoveriano .filter {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(153, 205, 50, 0.491);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+body .hoveriano p {
+  opacity: 0;
+}
+body .hoveriano img {
+  position: absolute;
+  z-index: 0;
+  bottom: 0px;
+  left: 0px;
+  object-fit: cover;
+  width: 100%;
+  height: calc(100% + 40px);
+}
+body .hoveriano header {
+  z-index: 20;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+body .hoveriano header h1 {
+  font-size: 100%;
+  font-weight: 200;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+}
+body .hoveriano header h1 span {
+  font-weight: 800;
+}
+body .hoveriano header p {
+  font-size: 50%;
+  color: white;
+}
