@@ -1,19 +1,21 @@
 body {
     @w: 50px;
-    @t: 1s;
+    @t: 2s;
     @num_boles: 12;
 
     @keyframes bolaMover {
         0% {
             transform: translateY(0px) rotate(0deg);
             border-radius: 50%;
-            border: 1px solid red;
+            //border: 1px solid red;
+
         }
 
         50% {
             transform: translateY(-3*@w) rotate(180deg);
             border-radius: 0%;
-            border: 3px solid red;
+            //border: 3px solid red;
+
         }
 
 
@@ -21,7 +23,8 @@ body {
         100% {
             transform: translateY(0px) rotate(360deg);
             border-radius: 50%;
-            border: 1px solid red;
+            //border: 1px solid red;
+
         }
     }
 
@@ -43,6 +46,12 @@ body {
                 background-color: aqua;
                 margin: 10px;
                 animation: bolaMover @t ease-in-out 0s infinite;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d0e4f7+0,73b1e7+24,0a77d5+50,539fe1+79,87bcea+100;Blue+Pipe+%231 */
+                background: rgb(208, 228, 247);
+
+                background: radial-gradient(ellipse at 70% 70%, rgba(208, 228, 247, 1) 0%, rgba(115, 177, 231, 1) 24%, rgba(10, 119, 213, 1) 50%, rgba(83, 159, 225, 1) 79%, rgba(135, 188, 234, 1) 100%);
+
+
             }
 
             /*
