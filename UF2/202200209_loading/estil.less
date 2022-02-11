@@ -1,21 +1,27 @@
 body {
     @w: 50px;
-    @t: 3s;
+    @t: 1s;
     @num_boles: 12;
 
     @keyframes bolaMover {
         0% {
-            transform: translateY(0px);
+            transform: translateY(0px) rotate(0deg);
+            border-radius: 50%;
+            border: 1px solid red;
         }
 
         50% {
-            transform: translateY(-3*@w);
+            transform: translateY(-3*@w) rotate(180deg);
+            border-radius: 0%;
+            border: 3px solid red;
         }
 
 
 
         100% {
-            transform: translateY(0px);
+            transform: translateY(0px) rotate(360deg);
+            border-radius: 50%;
+            border: 1px solid red;
         }
     }
 
@@ -36,7 +42,7 @@ body {
                 height: @w;
                 background-color: aqua;
                 margin: 10px;
-                animation: bolaMover @t linear 0s infinite;
+                animation: bolaMover @t ease-in-out 0s infinite;
             }
 
             /*
@@ -64,8 +70,8 @@ body {
 
 
             .foo(@n, @i: 1) when (@i =< @n) {
-                &:nth-child(@{i}) {
-                    animation-delay: (@{i-1} * @t / @num_boles);
+                li:nth-child(@{i}) {
+                    animation-delay: ((@i - 1) * @t / (@num_boles ));
                 }
 
                 .foo(@n, (@i + 1));
