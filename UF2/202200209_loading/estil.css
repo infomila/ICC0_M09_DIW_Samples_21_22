@@ -1,0 +1,45 @@
+@keyframes bolaMover {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-150px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+body main .capsa {
+  display: flex;
+}
+body main .capsa li {
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+  margin: 10px;
+  animation: bolaMover 3s linear 0s infinite;
+}
+body main .capsa li:nth-child(2) {
+  animation-delay: 0.5s;
+}
+body main .capsa li:nth-child(3) {
+  animation-delay: 1s;
+}
+body main .capsa li:nth-child(4) {
+  animation-delay: 1.5s;
+}
+body main .capsa li:nth-child(5) {
+  animation-delay: 2s;
+}
+body main .capsa li:nth-child(6) {
+  animation-delay: 2.5s;
+}

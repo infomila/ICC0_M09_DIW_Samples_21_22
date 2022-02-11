@@ -1,0 +1,40 @@
+@keyframes animacio {
+  0% {
+    top: 0%;
+    left: 0%;
+    background-color: red;
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+  25% {
+    top: 0%;
+    left: calc(100% - 100px);
+    background-color: green;
+  }
+  50% {
+    background-color: blue;
+    top: calc(100% - 100px);
+    left: calc(100% - 100px);
+  }
+  75% {
+    background-color: blue;
+    top: calc(100% - 100px);
+    left: 0px;
+  }
+  100% {
+    top: 0%;
+    left: 0%;
+    background-color: red;
+    transform: translateX(0%);
+    transform: rotate(1800deg);
+  }
+}
+body .capsa {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: animacio;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
