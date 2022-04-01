@@ -1,0 +1,83 @@
+@keyframes barraMover {
+  0% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+body main .capsacontenidora {
+  background-color: black;
+  padding: 10px;
+  position: relative;
+}
+body main .capsacontenidora:nth-child(1):after {
+  animation-delay: 1.25447421s;
+}
+body main .capsacontenidora:nth-child(2):after {
+  animation-delay: 1.72085649s;
+}
+body main .capsacontenidora:nth-child(3):after {
+  animation-delay: 1.46355384s;
+}
+body main .capsacontenidora:nth-child(4):after {
+  animation-delay: 3.01767875s;
+}
+body main .capsacontenidora:nth-child(5):after {
+  animation-delay: 0.11336754s;
+}
+body main .capsacontenidora:nth-child(6):after {
+  animation-delay: 3.85764464s;
+}
+body main .capsacontenidora:nth-child(7):after {
+  animation-delay: 3.33170993s;
+}
+body main .capsacontenidora:nth-child(8):after {
+  animation-delay: 1.63555942s;
+}
+body main .capsacontenidora:nth-child(9):after {
+  animation-delay: 1.27170447s;
+}
+body main .capsacontenidora:nth-child(10):after {
+  animation-delay: 1.28490976s;
+}
+body main .capsacontenidora:nth-child(11):after {
+  animation-delay: 2.70928472s;
+}
+body main .capsacontenidora:nth-child(12):after {
+  animation-delay: 2.09823834s;
+}
+body main .capsacontenidora::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0px;
+  left: 0px;
+  position: absolute;
+  background-color: black;
+  top: 0px;
+  animation: barraMover 4s steps(14) infinite;
+}
+body main .capsacontenidora .capsa {
+  display: flex;
+  flex-direction: column;
+  background: #ff0000;
+  background: linear-gradient(0deg, #ff0000 0%, #45ff00 100%);
+}
+body main .capsacontenidora .capsa li {
+  display: block;
+  width: 50px;
+  height: 5px;
+  background-color: black;
+  margin-top: 10px;
+}
